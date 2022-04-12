@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Createx Construction">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220412091628">
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<title>Contacts</title>
+</head>
+
+<body>
+	<div class="wrapper" data-lp>
+		<header class="header " data-lp data-header-scroll="false,10">
+	<div class="header__container">
+		<div class="header__body">
+			<a href="index.html" class="header__logo">
+				<img src="img/logo.svg" alt="Createx logo">
+			</a>
+			<button class="header__toggle menu-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+				<span></span>
+			</button>
+			<div class="header__menu menu">
+				<nav class="menu__body">
+					<ul class="menu__list">
+						<li class="menu__item"><a href="about.html" class="menu__link ">About Us</a></li>
+						<li class="menu__item"><a href="services.html" class="menu__link ">Services</a></li>
+						<li class="menu__item"><a href="works.html" class="menu__link ">Works</a></li>
+						<li class="menu__item"><a href="news.html" class="menu__link ">News</a></li>
+						<li class="menu__item"><a href="contacts.html" class="menu__link active">Contacts</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="header__contacts contacts" data-da=".header__logo,768,after">
+				<a href="tel:4055550128" class="contacts__link" aria-label="Call us">
+					<img class="contacts__icon" src="img/header/phone.svg" alt="phone icon">
+					<span class="contacts__caption">Call us</span>
+					<span class="contacts__value">(405) 555-0128</span>
+				</a>
+				<a href="mailto:hello@createx.com" class="contacts__link" aria-label="Talk to us">
+					<img class="contacts__icon" src="img/header/email.svg" alt="email icon">
+					<span class="contacts__caption">Talk to us</span>
+					<span class="contacts__value">hello@createx.com</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</header>
+		<main class="page">
+			<section class="page__intro page__intro--contacts intro">
+				<div class="intro__container">
+					<div class="intro__body">
+						<div class="intro__breadcrumbs breadcrumbs">
+							<a href="index.html" class="breadcrumbs__link">Homepage</a>
+							<a href="#" class="breadcrumbs__link">Contacts</a>
+						</div>
+						<h1 class="intro__title title">CONTACTS</h1>
+						<p class="intro__desc">Contact us for all your construction needs. We always welcome any questions and comments.</p>
+					</div>
+				</div>
+			</section>
+			<section class="page__contact contact">
+				<div class="contact__container">
+					<h2 class="contact__title section-title">Contact us</h2>
+					<p class="contact__desc section-desc">Please complete the form. Detailed information will help us to make a tuned offer.</p>
+					<div class="contact__body">
+						<div class="contact__left">
+							<div class="contact__image bg">
+								<picture><source srcset="img/contact/bg.webp" type="image/webp"><img src="img/contact/bg.jpg" alt="woman"></picture>
+							</div>
+						</div>
+						<form action="#" class="contact__form form form-contact">
+							<div class="form__item form-contact__item">
+								<label>
+									<span class="form__label">Name*</span>
+									<input id="name-contact" type="text" class="form__input" name="name" placeholder="Your name">
+								</label>
+							</div>
+							<div class="form__item form-contact__item">
+								<label class="form__label" for="post-contact">I am interested in</label>
+								<div class="select" data-select>
+									<div class="select__wrapper">
+										<select name="post" id="post-contact" class="select__native form__input" data-select-native>
+											<option value="1">Interior Design</option>
+											<option value="2">Construction</option>
+											<option value="3">Project Development</option>
+											<option value="4">Repairs</option>
+										</select>
+										<div class="select__custom" data-select-custom aria-hidden="true">
+											<div class="select__trigger form__input">Interior Design</div>
+											<div class="select__options">
+												<div class="select__option" data-value="1">Interior Design</div>
+												<div class="select__option" data-value="2">Construction</div>
+												<div class="select__option" data-value="3">Project Development</div>
+												<div class="select__option" data-value="4">Repairs</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form__item form-contact__item">
+								<label>
+									<span class="form__label">Phone*</span>
+									<input id="phone-contact" type="tel" class="form__input" name="phone" placeholder="Your phone number">
+								</label>
+							</div>
+							<div class="form__item form-contact__item">
+								<label class="form__label" for="post-location">Location*</label>
+								<div class="select" data-select>
+									<div class="select__wrapper">
+										<select name="location" id="post-location" class="select__native form__input" data-select-native>
+											<option value="1">New York</option>
+											<option value="2">Los Angeles</option>
+											<option value="3">Chicago</option>
+											<option value="4">Houston</option>
+											<option value="5">Philadelphia</option>
+										</select>
+										<div class="select__custom" data-select-custom aria-hidden="true">
+											<div class="select__trigger form__input">New York</div>
+											<div class="select__options">
+												<div class="select__option" data-value="1">New York</div>
+												<div class="select__option" data-value="2">Los Angeles</div>
+												<div class="select__option" data-value="3">Chicago</div>
+												<div class="select__option" data-value="4">Houston</div>
+												<div class="select__option" data-value="5">Philadelphia</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form__item form-contact__item">
+								<label>
+									<span class="form__label">Email*</span>
+									<input id="email-contact" type="email" class="form__input" name="email" placeholder="Your working email">
+								</label>
+							</div>
+							<div class="form__item form-contact__item">
+								<span class="form__label">Preferred contact method</span>
+								<div class="form__radios" id="radio-contact-group">
+									<label class="form__radio">
+										<input type="radio" name="radio" value="phone" checked>
+										<span>Phone</span>
+									</label>
+									<label class="form__radio">
+										<input type="radio" name="radio" value="email">
+										<span>Email</span>
+									</label>
+									<label class="form__radio">
+										<input type="radio" name="radio" value="viber">
+										<span>Viber</span>
+									</label>
+								</div>
+							</div>
+							<div class="form__item form-contact__textarea">
+								<label>
+									<span class="form__label">Message*</span>
+									<textarea id="message-contact" class="form__input" name="message" placeholder="Your message"></textarea>
+								</label>
+							</div>
+							<div class="form__item form-contact__bottom">
+								<label class="form-contact__checkbox">
+									<input id="checkbox-contact" type="checkbox" class="form__checkbox" name="checkbox">
+									<span class="form__label">I agree to receive communications from Createx Construction Bureau.</span>
+								</label>
+								<button type="submit" class="form__button button button--regular button--primary">Send Request</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="page__offices offices">
+				<div class="offices__container">
+					<h2 class="offices__title section-title">Our offices</h2>
+					<p class="offices__desc section-desc">Give us a call, send us a note or visit our office. We can’t wait to hear from you!</p>
+					<div class="offices__body">
+						<div class="offices__item item-offices">
+							<h3 class="item-offices__title">New York, USA</h3>
+							<a href="#" class="item-offices__address">
+								<address>8502 Preston Rd. Inglewood, New York 98380</address>
+								<span>See on the map</span>
+							</a>
+							<ul class="item-offices__list">
+								<li class="item-offices__item"><a href="tel:4055550128" class="item-offices__link"><span>Call:</span> (405) 555-0128</a></li>
+								<li class="item-offices__item"><a href="mailto:hello@createx.com" class="item-offices__link"><span>Email:</span> hello@createx.com</a></li>
+								<li class="item-offices__item"><span>Schedule:</span> Mon - Fri 9:00 - 18:00</li>
+							</ul>
+						</div>
+						<div class="offices__item item-offices">
+							<h3 class="item-offices__title">New Jersey, USA</h3>
+							<a href="#" class="item-offices__address">
+								<address>2464 Royal Ln. Mesa, New Jersey 45463</address>
+								<span>See on the map</span>
+							</a>
+							<ul class="item-offices__list">
+								<li class="item-offices__item"><a href="tel:8085550111" class="item-offices__link"><span>Call:</span> (808) 555-0111</a></li>
+								<li class="item-offices__item"><a href="mailto:hello@createx.com" class="item-offices__link"><span>Email:</span> hello@createx.com</a></li>
+								<li class="item-offices__item"><span>Schedule:</span> Mon - Fri 9:00 - 18:00</li>
+							</ul>
+						</div>
+						<div class="offices__item item-offices">
+							<h3 class="item-offices__title">San Francisco, USA</h3>
+							<a href="#" class="item-offices__address">
+								<address>8502 Preston Rd. Inglewood, San Francisco 98380</address>
+								<span>See on the map</span>
+							</a>
+							<ul class="item-offices__list">
+								<li class="item-offices__item"><a href="tel:5055550125" class="item-offices__link"><span>Call:</span> (505) 555-0125</a></li>
+								<li class="item-offices__item"><a href="mailto:hello@createx.com" class="item-offices__link"><span>Email:</span> hello@createx.com</a></li>
+								<li class="item-offices__item"><span>Schedule:</span> Mon - Fri 10:00 - 19:00</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__application application">
+				<div class="application__container">
+					<form action="#" class="application__form form form-application">
+						<div class="form__body form-application__body">
+							<h2 class="form-application__title section-subtitle">A quick way to discuss details</h2>
+							<div class="form__item form-application__item">
+								<label>
+									<span class="form__label">Name*</span>
+									<input id="name-application" type="text" class="form__input" name="name" placeholder="Your name">
+								</label>
+							</div>
+							<div class="form__item form-application__item">
+								<label>
+									<span class="form__label">Phone*</span>
+									<input id="phone-application" type="tel" class="form__input" name="phone" placeholder="Your phone number">
+								</label>
+							</div>
+							<div class="form__item form-application__item">
+								<label>
+									<span class="form__label">Email*</span>
+									<input id="email-application" type="email" class="form__input" name="email" placeholder="Your working email">
+								</label>
+							</div>
+							<div class="form__item form-application__textarea">
+								<label>
+									<span class="form__label">Message*</span>
+									<textarea id="message-application" class="form__input" name="message" placeholder="Your message"></textarea>
+								</label>
+							</div>
+							<div class="form__item form-application__item">
+								<label class="form-application__checkbox">
+									<input id="checkbox-application" type="checkbox" class="form__checkbox" name="checkbox">
+									<span class="form__label">I agree to receive communications from Createx Construction Bureau.</span>
+								</label>
+							</div>
+						</div>
+						<button type="submit" class="form__button button button--regular button--primary">Send Request</button>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+	<div class="footer__container">
+		<div class="footer__top ">
+			<div class="footer__info">
+				<a href="#" class="footer__logo">
+					<img src="img/logo-light.svg" alt="Createx logo">
+				</a>
+				<ul class="footer__social social social--footer">
+					<li class="social__item">
+						<a href="#" class="social__link" aria-label="whatsapp">
+							<svg>
+								<use xlink:href="img/icons/sprite.svg#whatsapp"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link" aria-label="messanger">
+							<svg>
+								<use xlink:href="img/icons/sprite.svg#messanger"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link" aria-label="facebook">
+							<svg>
+								<use xlink:href="img/icons/sprite.svg#facebook"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link" aria-label="twitter">
+							<svg>
+								<use xlink:href="img/icons/sprite.svg#twitter"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="social__item">
+						<a href="#" class="social__link" aria-label="youtube">
+							<svg>
+								<use xlink:href="img/icons/sprite.svg#youtube"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+				<p class="footer__desc">Createx Construction Bureau has been successfully operating in the USA construction market since 2000. We are proud to offer you quality construction and exemplary service. Our mission is to set the highest standards for construction sphere.</p>
+			</div>
+			<form action="#" class="footer__form form form-footer">
+				<h2 class="form-footer__title section-subtitle">Let's stay in touch</h2>
+				<div class="form-footer__label">
+					<label class="visually-hidden" for="email-footer">Email</label>
+					<input id="email-footer" type="email" class="form__input form__input--dark" name="email" placeholder="Your email address ">
+					<button type="submit" class="form__button button button--regular button--primary">Subscribe</button>
+				</div>
+				<p class="form-footer__text">*Subscribe to our newsletter to receive communications and early updates from Createx Construction Bureau.</p>
+			</form>
+		</div>
+		<div class="footer__main main-footer">
+			<div class="main-footer__block">
+				<h3 class="main-footer__title">Head office</h3>
+				<ul class="main-footer__list">
+					<li class="main-footer__item">
+						<a href="#" class="main-footer__link">
+							<span>Address:</span>
+							8502 Preston Rd. Inglewood, New York
+						</a>
+					</li>
+					<li class="main-footer__item">
+						<a href="tel:4055550128" class="main-footer__link">
+							<span>Call:</span>
+							(405) 555-0128
+						</a>
+					</li>
+					<li class="main-footer__item">
+						<a href="mailto:hello@createx.com" class="main-footer__link">
+							<span>Email:</span>
+							hello@createx.com
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="main-footer__block">
+				<h3 class="main-footer__title">Who we are</h3>
+				<ul class="main-footer__list">
+					<li class="main-footer__item"><a href="about.html" class="main-footer__link">About Us</a></li>
+					<li class="main-footer__item"><a href="contacts.html" class="main-footer__link">Contacts</a></li>
+				</ul>
+			</div>
+			<div class="main-footer__block">
+				<h3 class="main-footer__title">Our experience</h3>
+				<ul class="main-footer__list">
+					<li class="main-footer__item"><a href="services.html" class="main-footer__link">Services</a></li>
+					<li class="main-footer__item"><a href="works.html" class="main-footer__link">Works</a></li>
+					<li class="main-footer__item"><a href="news.html" class="main-footer__link">News</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<a href="#" class="footer__goto goto" data-smooth>
+				<span>Go to top</span>
+				<span class="goto__button"></span>
+			</a>
+		</div>
+	</div>
+</footer>
+		<div class="popup-success" role="dialog" data-lp data-popup="form">
+	<div class="popup-success__wrapper">
+		<div class="popup-success__content">
+			<div class="popup-success__body">
+				<div class="popup-success__icon">
+					<img src="img/form/check.svg" alt="success">
+				</div>
+				<div class="popup-success__title">Your data was successfully sent!</div>
+			</div>
+			<button class="popup-success__close" aria-label="Close modal window" data-popup-close>
+				<svg>
+					<use xlink:href="img/icons/sprite.svg#close"></use>
+				</svg>
+			</button>
+		</div>
+	</div>
+</div>
+	</div>
+	<script src="js/main.min.js?_v=20220412091628"></script>
+</body>
+
+</html>

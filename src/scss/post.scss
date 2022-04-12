@@ -1,0 +1,214 @@
+//================================================================================
+.article {
+	// .article__container
+	&__container {
+	}
+	// .article__image
+	&__image {
+		overflow: hidden;
+		border-radius: rem(4);
+		padding-bottom: percent(500, 1230);
+		margin-bottom: rem(30);
+		@media (min-width: $tablet) {
+			margin-top: rem(-80);
+			margin-bottom: rem(80);
+		}
+		@media (max-width: $mobile) {
+			border-radius: 0;
+			margin: 0 rem(-15) rem(20);
+		}
+	}
+	// .article__container-small
+	&__container-small {
+	}
+	// .article__text
+	&__text {
+		&:not(:last-child) {
+			margin-bottom: rem(40);
+		}
+		p {
+			color: var(--color-dark);
+			&.strong {
+				color: var(--color-black);
+				font-weight: 700;
+				font-size: rem(20);
+				line-height: math.div(30, 20);
+			}
+			&:not(:last-child) {
+				margin-bottom: rem(24);
+			}
+		}
+	}
+	// .article__quote
+	&__quote {
+		padding-left: rem(60);
+		margin-bottom: rem(48);
+		color: var(--color-black);
+		font-weight: 700;
+		font-size: rem(20);
+		line-height: math.div(30, 20);
+		background-image: url("@img/quote/braces.svg");
+		background-position: top left;
+		background-repeat: no-repeat;
+		@media (max-width: $mobile) {
+			padding-left: rem(30);
+			margin-bottom: rem(20);
+			font-size: rem(18);
+			background-size: rem(20);
+		}
+	}
+	// .article__list
+	&__list {
+		display: grid;
+		gap: rem(4);
+		margin-bottom: rem(24);
+	}
+	// .article__item
+	&__item {
+		color: var(--color-dark);
+		padding-left: rem(36);
+		background-image: url("@img/decisions/check.svg");
+		background-position: left top rem(3);
+		background-repeat: no-repeat;
+	}
+	// .article__social
+	&__social {
+		&::before {
+			content: "Share:";
+			color: var(--color-black);
+			font-weight: 700;
+		}
+	}
+}
+//================================================================================
+.comments {
+	// .comments__container-small
+	&__container-small {
+	}
+	// .comments__title
+	&__title {
+		margin-bottom: em(60, 46);
+		@media (max-width: $mobileSmall) {
+			margin-bottom: em(30, 46);
+		}
+	}
+	// .comments__body
+	&__body {
+		display: grid;
+		gap: rem(60);
+		@media (max-width: $mobile) {
+			gap: rem(30);
+		}
+	}
+	// .comments__item
+	&__item {
+	}
+}
+.item-comments {
+	display: grid;
+	align-items: start;
+	grid-template-columns: rem(150) 1fr;
+	gap: rem(30);
+	@media (max-width: $mobile) {
+		gap: rem(15);
+	}
+	@media (max-width: $mobileSmall) {
+		grid-template-columns: 1fr;
+	}
+	// .item-comments__user
+	&__user {
+	}
+	// .item-comments__name
+	&__name {
+		color: var(--color-black);
+		font-weight: 700;
+		font-size: rem(18);
+		line-height: math.div(27, 18);
+		margin-bottom: em(6, 18);
+	}
+	// .item-comments__date
+	&__date {
+		font-size: rem(14);
+		line-height: math.div(21, 14);
+	}
+	// .item-comments__content
+	&__content {
+	}
+	// .item-comments__text
+	&__text {
+		color: var(--color-dark);
+		margin-bottom: em(16, 16);
+		a {
+			color: var(--color-primary);
+			font-weight: 700;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	// .item-comments__reply
+	&__reply {
+		display: flex;
+		align-items: center;
+		transition: color 0.3s;
+		svg {
+			width: rem(16);
+			height: rem(16);
+			margin-right: rem(8);
+			fill: currentColor;
+		}
+		span {
+			font-size: rem(14);
+			line-height: math.div(21, 14);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--color-primary);
+			}
+		}
+	}
+}
+//================================================================================
+.post {
+	// .post__container
+	&__container {
+	}
+	// .post__title
+	&__title {
+		margin-bottom: em(48, 46);
+	}
+	// .post__form
+	&__form {
+	}
+}
+.form-post {
+	text-align: center;
+	// .form-post__body
+	&__body {
+		display: grid;
+		gap: rem(22) rem(30);
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: rem(48);
+		@media (max-width: $mobile) {
+			margin-bottom: rem(20);
+		}
+	}
+	// .form-post__item
+	&__item {
+		text-align: left;
+		@media (max-width: $mobile) {
+			grid-column: span 2;
+		}
+	}
+	// .form-post__textarea
+	&__textarea {
+		text-align: left;
+		grid-column: span 2;
+		textarea {
+			min-height: rem(100);
+		}
+	}
+}
+//================================================================================

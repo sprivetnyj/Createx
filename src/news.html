@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"News"
+})
+
+<body>
+	<div class="wrapper" data-lp>
+		@@include('html/header.html',{"page":"news"})
+		<main class="page">
+			<section class="page__intro page__intro--news intro">
+				<div class="intro__container">
+					<div class="intro__body">
+						<div class="intro__breadcrumbs breadcrumbs">
+							<a href="index.html" class="breadcrumbs__link">Homepage</a>
+							<a href="#" class="breadcrumbs__link">News</a>
+						</div>
+						<h1 class="intro__title title">News</h1>
+						<p class="intro__desc">Stay tuned with our news, expert tips and articles.</p>
+					</div>
+				</div>
+			</section>
+			<section class="page__categories categories">
+				<div class="categories__container">
+					<h2 class="categories__title section-title">Categories</h2>
+					<div class="categories__body" data-filter>
+						<ul class="categories__head">
+							<li class="categories__subtilte active" data-filter-title="all">
+								<button type="button">All News</button>
+							</li>
+							<li class="categories__subtilte" data-filter-title="company">
+								<button type="button">Company News</button>
+							</li>
+							<li class="categories__subtilte" data-filter-title="innovation">
+								<button type="button">Innovation</button>
+							</li>
+							<li class="categories__subtilte" data-filter-title="industry">
+								<button type="button">Industry News</button>
+							</li>
+							<li class="categories__subtilte" data-filter-title="tips">
+								<button type="button">Expert Tips</button>
+							</li>
+							<li class="categories__subtilte" data-filter-title="marketing">
+								<button type="button">Marketing</button>
+							</li>
+						</ul>
+						<div class="categories__content">
+							<div class="categories__item item-news" data-filter-item="industry">
+								<a href="post.html">
+									<div class="item-news__image bg">
+										<img src="@img/news/01.jpg" alt="Worker">
+									</div>
+									<div class="item-news__content">
+										<h3 class="item-news__title">How to Build Climate Change-Resilient Infrastructure</h3>
+										<div class="item-news__meta meta">
+											<div class="meta__cell">Industry News</div>
+											<div class="meta__cell">June 24, 2020</div>
+											<div class="meta__cell">4 comments</div>
+										</div>
+										<p class="item-news__text">Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis enim, nibh convallis...</p>
+									</div>
+								</a>
+							</div>
+							<div class="categories__item item-news" data-filter-item="innovation">
+								<a href="post.html">
+									<div class="item-news__image bg">
+										<img src="@img/news/02.jpg" alt="Worker">
+									</div>
+									<div class="item-news__content">
+										<h3 class="item-news__title">How Construction Can Help Itself</h3>
+										<div class="item-news__meta meta">
+											<div class="meta__cell">Innovation</div>
+											<div class="meta__cell">June 12, 2020</div>
+											<div class="meta__cell">No comments</div>
+										</div>
+										<p class="item-news__text">Porta habitant vitae quam interdum. Leo viverra non volutpat rhoncus placerat vitae scelerisque. Rhoncus augue faucibus maecenas lacus...</p>
+									</div>
+								</a>
+							</div>
+							<div class="categories__item item-news" data-filter-item="tips">
+								<a href="post.html">
+									<div class="item-news__image bg">
+										<img src="@img/news/04.jpg" alt="Worker">
+									</div>
+									<div class="item-news__content">
+										<h3 class="item-news__title">The Difference Between a Digger and an Excavator</h3>
+										<div class="item-news__meta meta">
+											<div class="meta__cell">Expert Tips</div>
+											<div class="meta__cell">May 16, 2020</div>
+											<div class="meta__cell">No comments</div>
+										</div>
+										<p class="item-news__text">Cras est nisi purus velit facilisi vitae, dolor. Lorem scelerisque integer duis et nulla lobortis cursus. Viverra erat sollicitudin praesent viverra...</p>
+									</div>
+								</a>
+							</div>
+							<div class="categories__item item-news" data-filter-item="tips">
+								<a href="post.html">
+									<div class="item-news__image bg">
+										<img src="@img/news/05.jpg" alt="Worker">
+									</div>
+									<div class="item-news__content">
+										<h3 class="item-news__title">Building Construction Hand Tools</h3>
+										<div class="item-news__meta meta">
+											<div class="meta__cell">Expert Tips</div>
+											<div class="meta__cell">February 25, 2020</div>
+											<div class="meta__cell">1 comment</div>
+										</div>
+										<p class="item-news__text">Tellus quis aliquet volutpat nunc pulvinar donec sed sapien. Vitae elit id dolor, tristique massa. Fames lobortis orci rutrum bibendum integer...</p>
+									</div>
+								</a>
+							</div>
+							<div class="categories__item item-news" data-filter-item="industry">
+								<a href="post.html">
+									<div class="item-news__image bg">
+										<img src="@img/news/06.jpg" alt="Worker">
+									</div>
+									<div class="item-news__content">
+										<h3 class="item-news__title">Top 10 Construction Trends</h3>
+										<div class="item-news__meta meta">
+											<div class="meta__cell">Industry News</div>
+											<div class="meta__cell">January 14, 2020</div>
+											<div class="meta__cell">No comments</div>
+										</div>
+										<p class="item-news__text">Dignissim sed enim, eleifend morbi condimentum. Congue id quis vulputate dignissim eget. Ac ullamcorper nunc habitasse enim interdum platea...</p>
+									</div>
+								</a>
+							</div>
+							<div class="categories__item item-news" data-filter-item="company">
+								<a href="post.html">
+									<div class="item-news__image bg">
+										<img src="@img/news/03.jpg" alt="Worker">
+									</div>
+									<div class="item-news__content">
+										<h3 class="item-news__title">Types of Flooring Materials</h3>
+										<div class="item-news__meta meta">
+											<div class="meta__cell">Company News</div>
+											<div class="meta__cell">December 1, 2019</div>
+											<div class="meta__cell">No comments</div>
+										</div>
+										<p class="item-news__text">Maecenas donec lacinia nunc, quam sit magnis mauris. Neque bibendum et mauris, aenean. Vel arcu amet in sem parturient integer duis et nulla...</p>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__application application">
+				<div class="application__container">
+					<form action="#" class="application__form form form-application">
+						<div class="form__body form-application__body">
+							<h2 class="form-application__title section-subtitle">A quick way to discuss details</h2>
+							<div class="form__item form-application__item">
+								<label>
+									<span class="form__label">Name*</span>
+									<input id="name-application" type="text" class="form__input" name="name" placeholder="Your name">
+								</label>
+							</div>
+							<div class="form__item form-application__item">
+								<label>
+									<span class="form__label">Phone*</span>
+									<input id="phone-application" type="tel" class="form__input" name="phone" placeholder="Your phone number">
+								</label>
+							</div>
+							<div class="form__item form-application__item">
+								<label>
+									<span class="form__label">Email*</span>
+									<input id="email-application" type="email" class="form__input" name="email" placeholder="Your working email">
+								</label>
+							</div>
+							<div class="form__item form-application__textarea">
+								<label>
+									<span class="form__label">Message*</span>
+									<textarea id="message-application" class="form__input" name="message" placeholder="Your message"></textarea>
+								</label>
+							</div>
+							<div class="form__item form-application__item">
+								<label class="form-application__checkbox">
+									<input id="checkbox-application" type="checkbox" class="form__checkbox" name="checkbox">
+									<span class="form__label">I agree to receive communications from Createx Construction Bureau.</span>
+								</label>
+							</div>
+						</div>
+						<button type="submit" class="form__button button button--regular button--primary">Send Request</button>
+					</form>
+				</div>
+			</section>
+		</main>
+		@@include('html/footer.html',{})
+		@@include('html/popup.html',{})
+	</div>
+	<script src="js/main.min.js"></script>
+</body>
+
+</html>

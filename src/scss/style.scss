@@ -1,0 +1,307 @@
+// ВОЗМОЖНОСТИ SCSS ==============================================================
+
+// Математические функции
+@use "sass:math";
+
+// Функции и миксины
+@import "./modules/mixins";
+
+// ШРИФТЫ ========================================================================
+@import "fonts";
+
+$fontFamily: "Ubuntu";
+$fontSize: rem(16);
+$lineHeight: math.div(25, 16);
+
+// ЦВЕТА =========================================================================
+:root {
+	--color-black: #1e212c;
+	--color-dark: #424551;
+	--color-main: #787a80;
+	--color-gray: #e5e8ed;
+	--color-light: #fff;
+	--color-form-text: #9a9ca5;
+	--color-form-bg: #f4f5f6;
+	--color-form-border: #d7dadd;
+	--color-primary: #ff5a30;
+	--color-danger: #ff4242;
+	--color-success: #03cea4;
+}
+
+// Светлая и темная темы
+// @import "./modules/themes/light";
+// @import "./modules/themes/dark";
+
+// КОНТЕЙНЕР =====================================================================
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1230;
+// $maxWidthContainerFluid: 1920;
+$containerPadding: 30;
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// БРЕЙКПОИНТЫ ===================================================================
+$pc: em($containerWidth);
+$tablet: em(991.98);
+$mobile: em(767.98);
+$mobileSmall: em(479.98);
+
+// ОБНУЛЕНИЕ И БАЗОВЫЕ СТИЛИ =====================================================
+@import "./modules/null";
+
+body {
+	// Блокировка скролла
+	.lock & {
+		overflow: hidden;
+		touch-action: none;
+	}
+}
+
+[class*="__container"] {
+	max-width: rem($maxWidthContainer);
+	box-sizing: content-box;
+	margin: 0 auto;
+	padding: 0 rem(math.div($containerPadding, 2));
+}
+[class*="__container-small"] {
+	max-width: rem(820);
+}
+// [class*="__container-fluid"] {
+// 	max-width: rem($maxWidthContainerFluid);
+// }
+
+// Оболочка
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	> main {
+		flex: 1 1 auto;
+	}
+	// Фикс для некоторых слайдеров
+	> * {
+		min-width: 0;
+	}
+}
+
+// ОБЩИЕ СТИЛИ ===================================================================
+@import "common";
+
+// МОДУЛИ ========================================================================
+@import "main";
+
+// ГЛАВНЫЕ БЛОКИ =================================================================
+@import "header";
+@import "footer";
+
+// СТРАНИЦЫ ======================================================================
+@import "home";
+@import "services";
+@import "service";
+@import "works";
+@import "work";
+@import "about";
+@import "news";
+@import "post";
+@import "contacts";
+
+// PAGE ЭЛЕМЕНТЫ =================================================================
+.page {
+	// .page__hero
+	&__hero {
+	}
+	// .page__about
+	&__about {
+		@include adaptiveValue("padding-top", 124, 40);
+		@include adaptiveValue("padding-bottom", 180, 50);
+	}
+	// .page__mission
+	&__mission {
+		@media (max-width: $tablet) {
+			@include adaptiveValue("padding-bottom", 80, 50);
+		}
+		&--about {
+			@include adaptiveValue("padding-top", 80, 20);
+			@include adaptiveValue("padding-bottom", 180, 50);
+		}
+	}
+	// .page__question
+	&__question {
+		@media (max-width: $tablet) {
+			@include adaptiveValue("padding-bottom", 80, 25);
+		}
+	}
+	// .page__services
+	&__services {
+		@include adaptiveValue("padding-bottom", 80, 50);
+		@include adaptiveValue("padding-top", 80, 25);
+		@media (min-width: $tablet) {
+			@include adaptiveValue("padding-top", 212, 40);
+		}
+	}
+	// .page__portfolio
+	&__portfolio {
+		@include adaptiveValue("padding-top", 120, 66);
+		@include adaptiveValue("padding-bottom", 120, 50);
+	}
+	// .page__partners
+	&__partners {
+		&--home {
+			@include adaptiveValue("padding-top", 80, 40);
+			@include adaptiveValue("padding-bottom", 80, 50);
+		}
+		&--service {
+			@include adaptiveValue("padding-bottom", 90, 50);
+		}
+		&--works {
+			@include adaptiveValue("padding-top", 190, 40);
+			@include adaptiveValue("padding-bottom", 85, 50);
+		}
+		&--about {
+			@include adaptiveValue("padding-top", 120, 20);
+			@include adaptiveValue("padding-bottom", 150, 50);
+		}
+	}
+	// .page__clients
+	&__clients {
+		@media (max-width: $mobile) {
+			padding-bottom: rem(50);
+		}
+		&--works {
+			@include adaptiveValue("padding-top", 20, 40);
+		}
+	}
+	// .page__facts
+	&__facts {
+		@include adaptiveValue("padding-top", 180, 40);
+		@include adaptiveValue("padding-bottom", 180, 50);
+	}
+	// .page__news
+	&__news {
+		@include adaptiveValue("padding-bottom", 120, 50);
+	}
+	// .page__application
+	&__application {
+		@include adaptiveValue("padding-top", 80, 40);
+		@include adaptiveValue("padding-bottom", 80, 50);
+	}
+	// .page__intro
+	&__intro {
+		@include adaptiveValue("padding-top", 150, 100);
+		@include adaptiveValue("padding-bottom", 180, 50);
+		&--about {
+			background-image: url("@img/intro/about-bg.png");
+		}
+		&--contacts {
+			background-image: url("@img/intro/contacts-bg.png");
+		}
+		&--news {
+			background-image: url("@img/intro/news-bg.png");
+		}
+		&--service {
+			background-image: url("@img/intro/service-bg.png");
+		}
+		&--services {
+			background-image: url("@img/intro/services-bg.png");
+		}
+		&--works {
+			background-image: url("@img/intro/works-bg.png");
+		}
+	}
+	// .page__services-list
+	&__services-list {
+		@include adaptiveValue("padding-top", 120, 40);
+		@include adaptiveValue("padding-bottom", 180, 50);
+	}
+	// .page__offer
+	&__offer {
+		@include adaptiveValue("padding-top", 120, 40);
+		@include adaptiveValue("padding-bottom", 180, 50);
+	}
+	// .page__steps
+	&__steps {
+		@include adaptiveValue("padding-bottom", 120, 50);
+	}
+	// .page__benefits
+	&__benefits {
+		@include adaptiveValue("padding-top", 80, 40);
+		@include adaptiveValue("padding-bottom", 130, 50);
+	}
+	// .page__pricing
+	&__pricing {
+		@include adaptiveValue("padding-top", 80, 40);
+		@include adaptiveValue("padding-bottom", 120, 50);
+	}
+	// .page__works
+	&__works {
+		@include adaptiveValue("padding-bottom", 100, 50);
+		@media (min-width: $mobile) {
+			margin-top: rem(-60);
+		}
+	}
+	// .page__gallery
+	&__gallery {
+		@include adaptiveValue("padding-top", 150, 60);
+	}
+	// .page__decisions
+	&__decisions {
+		padding-top: rem(40);
+		@media (max-width: $mobile) {
+			padding-bottom: rem(50);
+		}
+	}
+	// .page__stat
+	&__stat {
+		@include adaptiveValue("padding-top", 120, 40);
+		@include adaptiveValue("padding-bottom", 120, 50);
+	}
+	// .page__quote
+	&__quote {
+		@include adaptiveValue("padding-bottom", 240, 50);
+		@media (max-width: $tablet) {
+			@include adaptiveValue("padding-bottom", 120, 25);
+		}
+	}
+	// .page__history
+	&__history {
+		@include adaptiveValue("padding-bottom", 100, 25);
+	}
+	// .page__team
+	&__team {
+		@include adaptiveValue("padding-bottom", 120, 50);
+	}
+	// .page__map
+	&__map {
+		@include adaptiveValue("padding-top", 120, 40);
+		@include adaptiveValue("padding-bottom", 120, 50);
+	}
+	// .page__categories
+	&__categories {
+		@include adaptiveValue("padding-top", 120, 40);
+		@include adaptiveValue("padding-bottom", 180, 50);
+	}
+	// .page__article
+	&__article {
+		// @include adaptiveValue("padding-top", 120, 40);
+		@include adaptiveValue("padding-bottom", 80, 50);
+	}
+	// .page__comments
+	&__comments {
+		@include adaptiveValue("padding-bottom", 120, 50);
+	}
+	// .page__post
+	&__post {
+		@include adaptiveValue("padding-bottom", 180, 50);
+	}
+	// .page__contact
+	&__contact {
+		@include adaptiveValue("padding-top", 120, 40);
+		@include adaptiveValue("padding-bottom", 120, 30);
+	}
+	// .page__offices
+	&__offices {
+		@include adaptiveValue("padding-top", 80, 20);
+		@include adaptiveValue("padding-bottom", 120, 50);
+	}
+}

@@ -1,0 +1,35 @@
+<header class="header @@if(page === 'home'){header--main}" data-lp data-header-scroll="false,10">
+	<div class="header__container">
+		<div class="header__body">
+			<a href="index.html" class="header__logo">
+				<img src="@img/logo.svg" alt="Createx logo">
+			</a>
+			<button class="header__toggle menu-toggle" type="button" aria-expanded="false" aria-label="Open menu">
+				<span></span>
+			</button>
+			<div class="header__menu menu">
+				<nav class="menu__body">
+					<ul class="menu__list">
+						<li class="menu__item"><a href="about.html" class="menu__link @@if(page === 'about'){active}">About Us</a></li>
+						<li class="menu__item"><a href="services.html" class="menu__link @@if(page === 'services'){active}">Services</a></li>
+						<li class="menu__item"><a href="works.html" class="menu__link @@if(page === 'works'){active}">Works</a></li>
+						<li class="menu__item"><a href="news.html" class="menu__link @@if(page === 'news'){active}">News</a></li>
+						<li class="menu__item"><a href="contacts.html" class="menu__link @@if(page === 'contacts'){active}">Contacts</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="header__contacts contacts" data-da=".header__logo,768,after">
+				<a href="tel:4055550128" class="contacts__link" aria-label="Call us">
+					<img class="contacts__icon" src="@img/header/phone.svg" alt="phone icon">
+					<span class="contacts__caption">Call us</span>
+					<span class="contacts__value">(405) 555-0128</span>
+				</a>
+				<a href="mailto:hello@createx.com" class="contacts__link" aria-label="Talk to us">
+					<img class="contacts__icon" src="@img/header/email.svg" alt="email icon">
+					<span class="contacts__caption">Talk to us</span>
+					<span class="contacts__value">hello@createx.com</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</header>

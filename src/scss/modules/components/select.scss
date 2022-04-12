@@ -1,0 +1,84 @@
+//================================================================================
+.select {
+	position: relative;
+	// .select__wrapper
+	&__wrapper {
+		position: relative;
+	}
+	// .select__native
+	&__native {
+		// отключаем дефолтную стрелочку
+		appearance: none;
+		position: relative;
+		width: 100%;
+		background-image: url("@img/form/arrow-bottom.svg");
+		background-position: right rem(14) center !important;
+		background-size: rem(20) !important;
+		&:focus + .select__custom {
+			display: none;
+		}
+	}
+	// .select__custom
+	&__custom {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: rem(45);
+		&.active {
+			.select__options {
+				display: block;
+			}
+		}
+	}
+	// .select__trigger
+	&__trigger {
+		cursor: pointer;
+		position: relative;
+		padding: rem(11) rem(16) !important;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&::after {
+			content: "";
+			width: rem(15);
+			height: rem(15);
+			background-image: url("@img/form/arrow-bottom.svg");
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+	// .select__options
+	&__options {
+		z-index: 5;
+		display: none;
+		position: absolute;
+		top: rem(44);
+		left: 0;
+		width: 100%;
+		border: rem(1) solid var(--color-form-border);
+		background-color: #fff;
+	}
+	// .select__option
+	&__option {
+		cursor: default;
+		padding: rem(5) rem(16);
+		&.active {
+			background-color: var(--color-form-border);
+		}
+		&.hover {
+			color: #fff;
+			background-color: var(--color-main);
+		}
+		&:not(:last-child) {
+			border-bottom: rem(1) solid var(--color-form-border);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--color-light);
+				background-color: var(--color-main);
+			}
+		}
+	}
+}
+//================================================================================

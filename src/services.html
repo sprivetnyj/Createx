@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Services"
+})
+
+<body>
+	<div class="wrapper" data-lp>
+		@@include('html/header.html',{"page":"services"})
+		<main class="page">
+			<section class="page__intro page__intro--services intro">
+				<div class="intro__container">
+					<div class="intro__body">
+						<div class="intro__breadcrumbs breadcrumbs">
+							<a href="index.html" class="breadcrumbs__link">Homepage</a>
+							<a href="services.html" class="breadcrumbs__link">Services</a>
+						</div>
+						<h1 class="intro__title title">Services</h1>
+						<p class="intro__desc">If you are looking for a full-service construction company, look to Createx Construction Bureau. We are doing our best to be a partner for all of your construction needs.</p>
+					</div>
+				</div>
+			</section>
+			<section class="page__services-list services-list">
+				<div class="services-list__container">
+					<div class="services-list__body">
+						<div class="services-list__item">
+							<div class="services-list__image bg">
+								<img src="@img/services/01.jpg" alt="Construction">
+							</div>
+							<div class="services-list__content">
+								<h2 class="services-list__title">Construction</h2>
+								<p class="services-list__desc">Sapien, feugiat faucibus orci arcu, vulputate. Tristique varius consectetur vulputate arcu, scelerisque nisi, nibh. Enim semper id sodales ultricies sed ut ut augue. Mattis habitant venenatis, gravida posuere massa ac interdum. Eget aliquam dignissim ut vestibulum. </p>
+								<a href="service.html" class="services-list__button button button--regular button--outline-primary">Learn more</a>
+							</div>
+						</div>
+						<div class="services-list__item">
+							<div class="services-list__image bg">
+								<img src="@img/services/02.jpg" alt="Project Development">
+							</div>
+							<div class="services-list__content">
+								<h2 class="services-list__title">Project Development</h2>
+								<p class="services-list__desc">Volutpat tellus mauris sit sit. Posuere ut sit vestibulum amet viverra in. Est nulla lectus purus tincidunt massa tortor. Hendrerit vulputate elementum blandit massa vitae amet felis eget. </p>
+								<a href="service.html" class="services-list__button button button--regular button--outline-primary">Learn more</a>
+							</div>
+						</div>
+						<div class="services-list__item">
+							<div class="services-list__image bg">
+								<img src="@img/services/03.jpg" alt="Interior Design">
+							</div>
+							<div class="services-list__content">
+								<h2 class="services-list__title">Interior Design</h2>
+								<p class="services-list__desc">Eleifend orci massa et facilisis orci feugiat ac. Congue in ut lacus, turpis accumsan gravida. Aliquet mattis dignissim massa sociis a, id bibendum. Egestas lorem eros, mi cras amet, vel eget molestie. Turpis enim arcu, amet donec massa pellentesque nulla duis. Arcu dictum metus sed purus senectus faucibus eget elementum pretium. </p>
+								<a href="service.html" class="services-list__button button button--regular button--outline-primary">Learn more</a>
+							</div>
+						</div>
+						<div class="services-list__item">
+							<div class="services-list__image bg">
+								<img src="@img/services/04.jpg" alt="Repairs">
+							</div>
+							<div class="services-list__content">
+								<h2 class="services-list__title">Repairs</h2>
+								<p class="services-list__desc">Facilisis cursus feugiat sit pulvinar amet. Ac facilisi dictum commodo, tortor gravida pretium, orci. Nunc sit sollicitudin id egestas mattis. Turpis viverra nec urna ultrices urna. </p>
+								<a href="service.html" class="services-list__button button button--regular button--outline-primary">Learn more</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__application application">
+				<div class="application__container">
+					<form action="#" class="application__form form form-application" data-form="form">
+						<div class="form__body form-application__body">
+							<h2 class="form-application__title section-subtitle">A quick way to discuss details</h2>
+							<div class="form__item form-application__item">
+								<label>
+									<span class="form__label">Name*</span>
+									<input id="name-application" type="text" class="form__input" name="name" placeholder="Your name">
+								</label>
+							</div>
+							<div class="form__item form-application__item">
+								<label>
+									<span class="form__label">Phone*</span>
+									<input id="phone-application" type="tel" class="form__input" name="phone" placeholder="Your phone number">
+								</label>
+							</div>
+							<div class="form__item form-application__item">
+								<label>
+									<span class="form__label">Email*</span>
+									<input id="email-application" type="email" class="form__input" name="email" placeholder="Your working email">
+								</label>
+							</div>
+							<div class="form__item form-application__textarea">
+								<label>
+									<span class="form__label">Message*</span>
+									<textarea id="message-application" class="form__input" name="message" placeholder="Your message"></textarea>
+								</label>
+							</div>
+							<div class="form__item form-application__item">
+								<label class="form-application__checkbox">
+									<input id="checkbox-application" type="checkbox" class="form__checkbox" name="checkbox">
+									<span class="form__label">I agree to receive communications from Createx Construction Bureau.</span>
+								</label>
+							</div>
+						</div>
+						<button type="submit" class="form__button button button--regular button--primary">Send Request</button>
+					</form>
+				</div>
+			</section>
+		</main>
+		@@include('html/footer.html',{})
+		@@include('html/popup.html',{})
+	</div>
+	<script src="js/main.min.js"></script>
+</body>
+
+</html>

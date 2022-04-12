@@ -1,0 +1,118 @@
+//================================================================================
+// input[type="search"]::-ms-clear,
+// input[type="search"]::-ms-reveal {
+// 	display: none;
+// 	width: 0;
+// 	height: 0;
+// }
+// input[type="search"]::-webkit-search-decoration,
+// input[type="search"]::-webkit-search-cancel-button,
+// input[type="search"]::-webkit-search-results-button,
+// input[type="search"]::-webkit-search-results-decoration {
+// 	display: none;
+// }
+textarea {
+	resize: none;
+}
+//================================================================================
+.form {
+	// .form__body
+	&__body {
+	}
+	// .form__item
+	&__item {
+		position: relative;
+	}
+	// .form__label
+	&__label {
+		display: block;
+		font-size: rem(14);
+		line-height: math.div(21, 14);
+		margin-bottom: em(8, 14);
+		color: var(--color-dark);
+	}
+	// .form__input
+	&__input {
+		position: relative;
+		width: 100%;
+		height: rem(45);
+		padding: rem(11) rem(32) rem(11) rem(16);
+		font-size: rem(14);
+		line-height: math.div(21, 14);
+		color: var(--color-black);
+		border-radius: rem(4);
+		border: rem(1) solid var(--color-form-border);
+		background-color: var(--color-form-bg);
+		background-position: right rem(16) center;
+		background-repeat: no-repeat;
+		background-size: rem(14);
+		&::placeholder {
+			color: var(--color-form-text);
+		}
+		&.error {
+			border-color: var(--color-danger);
+			background-image: url("@img/form/danger.svg");
+			&::placeholder:not(.form__input--dark) {
+				color: var(--color-black);
+			}
+		}
+		&.success {
+			background-image: url("@img/form/success.svg");
+		}
+		&--dark {
+			color: var(--color-light);
+			border: rem(1) solid rgba(#fff, 0.2);
+			background-color: rgba(#fff, 0.12);
+			&::placeholder {
+				color: rgba(#fff, 0.6);
+			}
+			// &.error {
+			// 	&::placeholder {
+			// 		color: var(--color-black);
+			// 	}
+			// }
+		}
+	}
+	// .form__checkbox
+	&__checkbox {
+		margin-right: rem(12);
+	}
+	// .form__button
+	&__button {
+	}
+	// .form__radios
+	&__radios {
+		display: flex;
+		align-items: center;
+		height: rem(45);
+	}
+	// .form__radio
+	&__radio {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			margin-right: rem(24);
+		}
+		span {
+			color: var(--color-dark);
+		}
+	}
+	// .form__error
+	&__error {
+		position: absolute;
+		bottom: rem(-4);
+		left: 0;
+		margin-top: rem(4);
+		transform: translate(0, 100%);
+		font-size: rem(12);
+		line-height: math.div(18, 12);
+		color: var(--color-danger) !important;
+	}
+	// .form__success
+	&__success {
+		@extend .form__error;
+		color: var(--color-success) !important;
+	}
+}
+//================================================================================
